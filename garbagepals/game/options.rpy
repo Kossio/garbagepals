@@ -17,13 +17,13 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 800
-    config.screen_height = 600
+    config.screen_width = 1920
+    config.screen_height = 1080
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"garbagepals"
+    config.window_title = u"Garbage Pals"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
@@ -71,7 +71,8 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#393939",
+        #mm_root = "#393939",
+        mm_root = "assets/title.jpg", #Main-menu background
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
@@ -187,7 +188,7 @@ init -1 python hide:
 
     ## Music that is played while the user is at the main menu.
 
-    # config.main_menu_music = "main_menu_theme.ogg"
+    config.main_menu_music = "assets/hyperfun.mp3"
 
 
     #########################################
