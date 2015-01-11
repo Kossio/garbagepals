@@ -6,6 +6,12 @@
 # Here we define the backgrounds that are used.
 image bg dumpster = "assets/dumpster.jpg"
 image bg trashcan = "assets/trashcan.jpg"
+image bg trash = "assets/trash.jpg"
+image overlay youdied = "assets/youdied.png"
+
+# And this is the character art we use.
+image dumpster default = "assets/bear.png"
+image trashcan default = "assets/raccoon.png"
 
 # Declare characters used by this game.
 define d = Character('Dumpster', color="#c8ffc8")
@@ -42,7 +48,7 @@ elif bearanger >2:
 elif raccoonanger >2:
     jump badendraccoon
 else:
-    $ question = renpy.random.randint(1, 13)
+    $ question = renpy.random.randint(1, 15)
 if question == 1:
     jump zero
 elif question == 2:
@@ -69,10 +75,16 @@ elif question == 12:
     jump eleven
 elif question == 13:
     jump twelve
+elif question == 14:
+    jump thirteen
+elif question == 15:
+    jump fourteen
 
 
 
 label zero:
+scene bg trash
+show dumpster default
 d "Am I garbage?"
 
 menu:
@@ -81,10 +93,12 @@ menu:
         $ bearhappy += 1
         jump checkandrandom
     "No":
-        $ bearanger -= 1
+        $ bearanger += 1
         jump checkandrandom
 
 label one:
+    scene bg trash
+    show dumpster default
     d "Am I garbage?"
     menu:
         "Yes":
@@ -95,7 +109,8 @@ label one:
             jump checkandrandom
 
 label two:
-
+    scene bg trash
+    show trashcan default
     t "Am I garbage?"
     menu:
         "Yes":
@@ -106,6 +121,8 @@ label two:
             jump checkandrandom
 
 label three:
+    scene bg trash
+    show dumpster default
     d "Do I have opposable thumbs?"
     menu:
         "Yes":
@@ -116,7 +133,8 @@ label three:
             jump checkandrandom
 
 label four:
-
+    scene bg trash
+    show trashcan default
     t "Do I have opposable thumbs?"
     menu:
         "Yes":
@@ -127,7 +145,8 @@ label four:
             jump checkandrandom
 
 label five:
-
+    scene bg trash
+    show dumpster default
     d "Does my fur look clean?"
     menu:
         "Yes":
@@ -137,6 +156,9 @@ label five:
             $ bearhappy += 1
             jump checkandrandom
 
+label fourteen:
+    scene bg trash
+    show trashcan default
     t "Does my fur look clean?"
     menu:
         "Yes":
@@ -147,7 +169,8 @@ label five:
             jump checkandrandom
 
 label six:
-
+    scene bg trash
+    show dumpster default
     d "Are humans awful?"
     menu:
         "Yes":
@@ -158,7 +181,8 @@ label six:
             jump checkandrandom
 
 label seven:
-
+    scene bg trash
+    show trashcan default
     t "Are humans awful?"
     menu:
         "Yes":
@@ -169,7 +193,8 @@ label seven:
             jump checkandrandom
 
 label eight:
-
+    scene bg trash
+    show dumpster default
     d "Want to pet my nose?"
     menu:
         "Yes":
@@ -180,7 +205,8 @@ label eight:
             jump checkandrandom
 
 label nine:
-
+    scene bg trash
+    show trashcan default
     t "Wanna pet my tail?"
     menu:
         "Yes":
@@ -191,7 +217,8 @@ label nine:
             jump checkandrandom
 
 label ten:
-
+    scene bg trash
+    show dumpster default
     d "Do you like running?"
     menu:
         "Yes":
@@ -202,7 +229,8 @@ label ten:
             jump checkandrandom
 
 label eleven:
-
+    scene bg trash
+    show trashcan default
     t "Do you like running?"
     menu:
         "Yes":
@@ -213,7 +241,8 @@ label eleven:
             jump checkandrandom
 
 label twelve:
-
+    scene bg trash
+    show trashcan default
     t "Do I ever get sweaty?"
     menu:
         "Yes":
@@ -224,7 +253,8 @@ label twelve:
             jump checkandrandom
 
 label thirteen:
-
+    scene bg trash
+    show dumpster default
     d "Am I endangered?"
     menu:
         "Yes":
@@ -243,10 +273,12 @@ label happyend:
 
 label badendbear:
     d "Roar I don't trust you you make me uncomfortable I'm gonna EAt YOU NOW"
+    show overlay youdied
     "bad end"
     return
 
 label badendraccoon:
     t "Fack u raccons r the worst hiss '3'"
+    show overlay youdied
     "bad end"
     return

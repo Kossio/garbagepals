@@ -1,24 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 187, in script
-    $ raccoonanger += 1
-  File "game/script.rpy", line 187, in <module>
-    $ raccoonanger += 1
-NameError: name 'raccoonanger' is not defined
+  File "game/script.rpy", line 185, in script
+    t "Are humans awful?"
+IOError: Couldn't find file 'assets/trash.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 187, in script
-    $ raccoonanger += 1
-  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/ast.py", line 785, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/python.py", line 1382, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script.rpy", line 187, in <module>
-    $ raccoonanger += 1
-NameError: name 'raccoonanger' is not defined
+  File "game/script.rpy", line 185, in script
+    t "Are humans awful?"
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/ast.py", line 593, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/exports.py", line 999, in say
+    who(what, interact=interact)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/character.py", line 826, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/character.py", line 688, in do_display
+    **display_args)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/character.py", line 491, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/core.py", line 2149, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/core.py", line 2478, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/core.py", line 1677, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 363, in renpy.display.render.render_screen (gen/renpy.display.render.c:5330)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen/renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen/renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen/renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "accelerator.pyx", line 108, in renpy.display.accelerator.transform_render (gen/renpy.display.accelerator.c:1922)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/image.py", line 207, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/image.py", line 82, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 98, in renpy.display.render.render (gen/renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen/renpy.display.render.c:2537)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/im.py", line 465, in render
+    im = cache.get(self)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/im.py", line 198, in get
+    surf = image.load()
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/display/im.py", line 509, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/Users/Kossio/Downloads/renpy-6.18.3-sdk/renpy/loader.py", line 438, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'assets/trash.jpg'.
 
 Darwin-14.0.0-x86_64-i386-64bit
 Ren'Py 6.18.3.761
