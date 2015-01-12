@@ -2,6 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 42: indentation mismatch.
+File "game/script.rpy", line 33: Line is indented, but the preceding play sound statement statement does not expect a block. Please check this line's indentation.
+    scene bg trashcan
+    ^
 
 Ren'Py Version: Ren'Py 6.18.3.761

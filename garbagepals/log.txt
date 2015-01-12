@@ -1,11 +1,11 @@
-Sun Jan 11 11:37:35 2015
+Sun Jan 11 16:19:01 2015
 Darwin-14.0.0-x86_64-i386-64bit
 Ren'Py 6.18.3.761
 garbagepals 0.0
 
 
-Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1328, 747)
+Fullscreen mode.
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080)
 Vendor: 'Intel Inc.'
 Renderer: 'Intel Iris OpenGL Engine'
 Version: '2.1 INTEL-10.0.86'
@@ -16,7 +16,7 @@ Display Info: <VideoInfo(hw = 0, wm = 1,video_mem = 0
 	     masks =  (65280, 16711680, -16777216, 0),
 	     shifts = (8, 16, 24, 0),
 	     losses =  (0, 0, 0, 8),
-	     current_w = 1440, current_h = 900
+	     current_w = 1920, current_h = 1080
 >
 
 Extensions:
@@ -164,8 +164,8 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.025249 seconds.
-- Frame drawn at 0.037037 seconds.
-- Frame drawn at 0.048605 seconds.
-- Frame drawn at 0.065384 seconds.
-- 0.065384 seconds to render 5 frames.
+- Frame drawn at 0.023793 seconds.
+- Frame drawn at 0.049406 seconds.
+- Frame drawn at 0.082888 seconds.
+- Frame drawn at 0.116270 seconds.
+- 0.116270 seconds to render 5 frames.

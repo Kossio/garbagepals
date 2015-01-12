@@ -94,6 +94,7 @@ menu:
         jump checkandrandom
     "No":
         $ bearanger += 1
+        play sound "assets/bearroar.mp3"
         jump checkandrandom
 
 label one:
@@ -106,6 +107,7 @@ label one:
             jump checkandrandom
         "No":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
 
 label two:
@@ -128,6 +130,7 @@ label three:
         "Yes":
             $ bearanger += 1
             jump checkandrandom
+            play sound "assets/bearroar.mp3"
         "No":
             $ bearhappy += 1
             jump checkandrandom
@@ -151,6 +154,7 @@ label five:
     menu:
         "Yes":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
         "No":
             $ bearhappy += 1
@@ -175,6 +179,7 @@ label six:
     menu:
         "Yes":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
         "No":
             $ bearhappy += 1
@@ -199,6 +204,7 @@ label eight:
     menu:
         "Yes":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
         "No":
             $ bearhappy += 1
@@ -226,6 +232,7 @@ label ten:
             jump checkandrandom
         "No":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
 
 label eleven:
@@ -237,7 +244,7 @@ label eleven:
             $ raccoonhappy += 1
             jump checkandrandom
         "No":
-            $ bearanger += 1
+            $ raccoonanger += 1
             jump checkandrandom
 
 label twelve:
@@ -259,6 +266,7 @@ label thirteen:
     menu:
         "Yes":
             $ bearanger += 1
+            play sound "assets/bearroar.mp3"
             jump checkandrandom
         "No":
             $ bearhappy += 1
